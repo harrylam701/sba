@@ -45,10 +45,21 @@ body {
 	height: 80px;
 	width: 4800px;
 }
-.button_box_button {
+.button_box_btn {
     height: 80px;
     width: 120px;
     float: left;
+}
+.button_box_fontsize {
+    position: absolute;
+    top: 20px; right: 200px;
+    height: 50px;
+    width: 100px;
+}
+.button_box_fontsize_btn {
+    height: 50px;
+    width: 50px;
+    float: right;
 }
 .oneColLiqCtrHdr #mainContent {
 	padding: 0 20px; /* 請記住，欄位間隔就是 Div 方塊內部的空間，而邊界就是 Div 方塊外部的空間 */
@@ -76,7 +87,23 @@ background: -webkit-linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 11
 background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
 }
 -->
-</style></head>
+</style>
+<script>
+    function increaseFontSize() {
+        var body = document.querySelector('body');
+        var computedFontSize = window.getComputedStyle(body).fontSize;
+        var currentFontSize = parseFloat(computedFontSize);
+
+        body.style.fontSize = (currentFontSize + 2) + 'px';
+    }
+    function decreaseFontSize() {
+        var body = document.querySelector('body');
+        var computedFontSize = window.getComputedStyle(body).fontSize;
+        var currentFontSize = parseFloat(computedFontSize);
+
+        body.style.fontSize = (currentFontSize - 2) + 'px';
+    }    
+</script></head>
 
 <body class="oneColLiqCtrHdr">
 
@@ -85,25 +112,33 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
 <h1>
     <img src="C:\Users\user\Documents\ABC中學50周年校慶開放日\Templates\source\schoolLogo01.png" height="100px">
     <div class="button_box">
-                <button class="button_box_button">
+                <button class="button_box_btn">
                     <a href="Subject_Activities.html" target="_self">
                         <span style="font-size:25px">科目活動</span>
                         </a>
                     </button>
-                <button class="button_box_button" target="_self">
+                <button class="button_box_btn" target="_self">
                     <a href="Student_Experience.html" target="_self">
                         <span style="font-size:25px">經歷活動</span></a>
                     </button>
-                <button class="button_box_button" target="_self">
+                <button class="button_box_btn" target="_self">
                     <a href="map.html">
                     <span style="font-size:25px">舉辦地點</span></a>
                     </button>
-                <button class="button_box_button">
+                <button class="button_box_btn">
                     <a href="questionnaire.html" target="_self">
                         <span style="font-size:25px">問卷</span>
                         </a>
                     </button>
         </div>
+    <div class="button_box_fontsize">
+        <button class="button_box_fontsize_btn">
+            <img src="source/svg/Decrease_font.svg" width="30px" height="30px" onclick="decreaseFontSize()">
+        </button>
+        <button class="button_box_fontsize_btn">
+            <img src="source/svg/Increase_font.svg" width="30px" height="30px" onclick="increaseFontSize()">
+        </button>
+    </div>
     </h1>
   <!-- end #header --></div>
 
@@ -146,8 +181,8 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
             全日活動
             <!--First Row-->
             <tr>
-                <td rowspan="2"><img src="source/Formula_Edge.png" height="200px">
-                    <img src="source/Formula_Edge2.jpg" height="200px" style="float: left;">
+                <td rowspan="2"><img src="source/index/Formula_Edge.png" height="200px">
+                    <img src="source/index/Formula_Edge2.jpg" height="200px" style="float: left;">
                     </td>
                 <td>Jetracer 體驗營</td>
             </tr>
@@ -156,8 +191,8 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
             </tr>
             <!--Second Row-->
             <tr>
-                <td rowspan="2"><img src="source/flightsimulator.jpg" height="200px">
-                    <img src="source/flightsimulator2.jpg" height="200px" style="float: left;">
+                <td rowspan="2"><img src="source/index/flightsimulator.jpg" height="200px">
+                    <img src="source/index/flightsimulator2.jpg" height="200px" style="float: left;">
                 </td>
                 <td>飛行模擬器教學</td>
             </tr>
@@ -165,8 +200,8 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
                 <td bgcolor="#40E0D0">2/F Stem室</td>
             </tr>
             <tr>
-                <td rowspan="2"><img src="source/drawing.jpg" height="200px">
-                    <img src="source/drawing2.jpg" height="200px" style="float: left;">>
+                <td rowspan="2"><img src="source/index/drawing.jpg" height="200px">
+                    <img src="source/index/drawing2.jpg" height="200px" style="float: left;">>
                     </td>
                     <td>噴畫工作坊</td>
                 </tr>

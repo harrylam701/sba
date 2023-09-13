@@ -18,9 +18,9 @@ document.write(`
 <p>ABC中學</p>
 <p>ABC Secondary School</p>
 <p>地址 : 屯門湖昌街3號</p>
-<p> 電話(Tel): 12345678<img src="copy_icon.svg" width="22" height="20" alt="copy icon"onclick="copytel()" /> 
-傳真(Fax): 12345678<img src="copy_icon.svg" width="22" height="20" alt="copy icon" onclick="copyfex()"/>
-電郵(Email): mail@abc.edu.hk <img src="copy_icon.svg" width="22" height="20" alt="copy icon" onclick="copyemail"/>
+<p> 電話(Tel): 12345678<img src="source/svg/copy_icon.svg" width="22" height="20" alt="copy icon"onclick="copytel()" /> 
+傳真(Fax): 12345678<img src="source/svg/copy_icon.svg" width="22" height="20" alt="copy icon" onclick="copyfex()"/>
+電郵(Email): mail@abc.edu.hk <img src="source/svg/copy_icon.svg" width="22" height="20" alt="copy icon" onclick="copyemail"/>
 </p>
 <p>
 <table style="width:20%">
